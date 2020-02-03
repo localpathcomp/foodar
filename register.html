@@ -6,6 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
+    <style>
+        div {
+            display: inline-block;
+        }
+        
+        input {
+            display: block;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        
+        form div:nth-child(4) {
+            clear: left;
+        }
+        
+        form div:nth-child(7) {
+            clear: left;
+        }
+        
+        form div:nth-child(9) {
+            clear: left;
+        }
+        
+        form div:nth-child(11) {
+            clear: left;
+        }
+        
+        form div {
+            float: left;
+        }
+        
+        .input-wrapper {
+            margin-right: 10px;
+            padding: 2px;
+        }
+        
+        .clear-b {
+            clear: both;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,17 +56,19 @@
     <div>
         <form method="POST" action="/">
             <p>Details:</p>
-            <input type="email" value="" required placeholder="Email">
-            <input type="password" value="" required placeholder="Password">
-            <input type="text" value="" required placeholder="First Name">
-            <input type="text" value="" required placeholder="Last Name">
+            <div class="input-wrapper"><label for="email">Email</label><input id="email" type="email" value="" required placeholder="Email"></div>
+            <div class="input-wrapper"><label for="password">Password</label><input id="password" type="password" value="" required placeholder="Password"></div>
+            <div class="input-wrapper"><label for="firstName">First Name</label><input id="firstName" type="text" value="" required placeholder="First Name"></div>
+            <div class="input-wrapper"><label for="lastName">Last Name</label><input id="lastName" type="text" value="" required placeholder="Last Name"></div>
 
-            <p>Address:</p>
-            <input type="text" value="" required placeholder="Address">
-            <input type="text" value="" required placeholder="Street">
-            <input type="text" value="" required placeholder="Citry">
-            <input type="number" value="" required placeholder="Zipcode">
-            <button type="submit">Register</button>
+            <div class="clear-b input-wrapper">
+                <p>Address:</p>
+            </div>
+            <div class="input-wrapper"><label for="address">Address</label><input id="address" type="text" value="" required placeholder="Address"></div>
+            <div class="input-wrapper"><label for="street">Street</label><input id="street" type="text" value="" required placeholder="Street"></div>
+            <div class="input-wrapper"><label for="city">City</label><input id="city" type="text" value="" required placeholder="City"></div>
+            <div class="input-wrapper"><label for="zip">Zipcode</label><input id="zip" type="number" value="" required placeholder="Zipcode"></div>
+            <div class="input-wrapper"><button type="submit">Register</button></div>
         </form>
     </div>
 </body>
