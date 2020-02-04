@@ -7,53 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
     <style>
-        div {
-            display: inline-block;
-        }
-        
         input {
             display: block;
             padding: 5px;
             margin: 5px 0;
         }
         
-        form div:nth-child(4) {
-            clear: left;
-        }
-        
-        form div:nth-child(7) {
-            clear: left;
-        }
-        
-        form div:nth-child(9) {
-            clear: left;
-        }
-        
-        form div:nth-child(11) {
-            clear: left;
-        }
-        
-        form div {
-            float: left;
+        form {
+            max-width: 500px;
         }
         
         .input-wrapper {
             margin-right: 10px;
+            display: inline-block;
             padding: 2px;
         }
         
-        .clear-b {
-            clear: both;
+        .d-block {
+            display: block;
+        }
+        
+        footer ul {
+            list-style: none;
+        }
+        
+        footer .copyright {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <p>Foodar</p>
+    <main>
+        <p>Foodar</p>
 
-    <h1>Register</h1>
-    <p>Please fill out the form below:</p>
-    <div>
+        <h1>Register</h1>
+        <p>Please fill out the form below:</p>
+
         <form method="POST" action="/">
             <p>Details:</p>
             <div class="input-wrapper"><label for="email">Email</label><input id="email" type="email" value="" required placeholder="Email"></div>
@@ -61,16 +51,29 @@
             <div class="input-wrapper"><label for="firstName">First Name</label><input id="firstName" type="text" value="" required placeholder="First Name"></div>
             <div class="input-wrapper"><label for="lastName">Last Name</label><input id="lastName" type="text" value="" required placeholder="Last Name"></div>
 
-            <div class="clear-b input-wrapper">
+            <div class="input-wrapper d-block">
                 <p>Address:</p>
             </div>
             <div class="input-wrapper"><label for="address">Address</label><input id="address" type="text" value="" required placeholder="Address"></div>
             <div class="input-wrapper"><label for="street">Street</label><input id="street" type="text" value="" required placeholder="Street"></div>
             <div class="input-wrapper"><label for="city">City</label><input id="city" type="text" value="" required placeholder="City"></div>
             <div class="input-wrapper"><label for="zip">Zipcode</label><input id="zip" type="number" value="" required placeholder="Zipcode"></div>
-            <div class="input-wrapper"><button type="submit">Register</button></div>
+            <div class="input-wrapper d-block">
+                <button type="submit">Register</button>
+            </div>
         </form>
-    </div>
+        <div style="display: block;"></div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="/" title="Click Here To Return To Home Page!">Home</a></li>
+            <li><a href="/about" title="Click Here To See Who We Are!">About</a></li>
+            <li><a href="/register" title="Click Here To Return To Register Your Account!">Register</a></li>
+        </ul>
+        <div class="copyright">
+            <p>Copyright &copy; 2020. <a href="/" title="Foodar Website">Foodar.</a><br> All Rights Reserved</p>
+        </div>
+    </footer>
 </body>
 
 </html>
